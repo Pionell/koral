@@ -140,19 +140,22 @@ input.activity-search:focus,div.search input:focus
       border: 3px solid #fff
 .dropdown
   position: relative
-  .dropdown-content
+  ul.dropdown-content
+    margin-top: 15px
     position: absolute
     display: none
-  &:hover ul.dropdown-content
-    display: block
     list-style: none
     background: #fff 
     float: none
     width: 160px
     z-index: 999
     box-shadow: 0px 32px 264px rgba(194, 194, 223, 0.471666)
-    li 
-      padding: 10px 0
+  li 
+    padding: 10px 0!important
+    //important because a rule for the parent li element overwrites it
+  &:hover ul.dropdown-content
+    display: block
+  
 .calendar-menu
   h1,.select-calendar.switch.switch-three.candy
     display: inline-block
@@ -244,6 +247,16 @@ button
     &:hover
       cursor: pointer
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  .event-more
+    &::before
+      display: block
+      content: "..."
+      position: absolute
+      right: 18px
+      font-size: 40px
+      line-height: 2px
+      top: 1px
+        
   .week-days .day
     height: 36px
     min-height: 36px
