@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <title>Koralis event calender</title>
+      <link rel="stylesheet" href="resources/css/master.min.css">
+   </head>
+   <body>
+      <div class="content-container">
+         <nav>
+            <div class="logo pull-left relative">
+               <img src="images/logo.png" alt="Koralis">
+            </div>
+            <div class="search pull-left relative">
+               <img src="images/icons/search.png" alt="">
+               <input type="search" name="search" value="General search">
+            </div>
+            <div class="navigation">
+               <ul class="style-none main-menu">
+                  <li><a href="#">storyline</a></li>
+                  <li class="active-menu"><a href="#">calender</a></li>
+                  <li><a href="#">dashboard</a></li>
+                  <li class="dropdown">
+                     <a href="#">drive</a>
+                     <ul class="dropdown-content">
+                        <li> <a href="#">navigation item</a> </li>
+                        <li> <a href="#">navigation item</a> </li>
+                        <li> <a href="#">navigation item</a> </li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+            <div class="navigation-messages nav">
+               <span class="notification-icon">
+               <img src="images/icons/chat.png" alt="messages">
+               <span class="notification-count">12</span>
+               </span>
+               <span class="notification-icon">
+               <img src="images/icons/person.png" alt="messages">
+               </span>
+               <span class="notification-icon">
+               <img src="images/icons/heart.png" alt="messages">
+               </span>
+            </div>
+            <div class="nav pull-right bordered user-info">
+               <span class="user-name">Darius Mikalauskas</span>
+               <div class="clearfix"></div>
+               <span class="light-bulb bulb-red"></span>  
+               <span class="grey-text">Do not disturb</span>        
+               <div class="user-photo pull-right">
+                  <img src="images/people/1.png" alt="$user-name">
+                  <span class="dropdown-toggle">
+                     <i class="fa fa-chevron-down"></i>
+                  </span>
+               </div>
+            </div>
+         </nav>
+         <div class="bottom-background">
+           <div id="calendar-wrapper" class="pull-left">
+              <div class="calendar-menu">
+                 <h1>Calendar</h1>
+                 <div class="select-calendar switch switch-three candy" id="radio-switch">
+                   <div class="switch relative">
+                      <input name="switch" id="one" type="radio" />
+                      <label for="one" class="switch__label">All</label>
+                      <input name="switch" id="two" type="radio" />
+                      <label for="two" class="switch__label">Important</label>
+                      <input name="switch" id="three" type="radio" />
+                      <label for="three" class="switch__label" checked>Meets</label>
+                       <input name="switch" id="four" type="radio" />
+                      <label for="four" class="switch__label" >Events</label>
+                      <div class="switch__indicator" /></div>
+                      </div>
+                   </div>
+                 <button type="button" name="add-event">+ Add event</button>
+              </div>
+              <div id="calendar">
+                 <div class="row first-calender-row">
+                    <span class="calendar-grid-filters">
+                    <img src="images/icons/grid_active.png" alt="grid view">
+                    <img src="images/icons/list.png" alt="grid view">
+                    </span>
+                    <div class="text-center percent-91">
+                       <span><img class="chevron-flipped" src="images/icons/chevron_right.png" alt="right"></span>
+                       <h3 class="month-active">May 2018</h3>
+                       <span><img src="images/icons/chevron_right.png" alt="right"></span>
+                    </div>
+                 </div>
+                 <div class="calendar-grid">
+                    <div class="row week-days">
+                       <span class="day">Sunday</span>
+                       <span class="day">Monday</span>
+                       <span class="day">Tuesday</span>
+                       <span class="day">Wednesday</span>
+                       <span class="day">Thursday</span>
+                       <span class="day">Friday</span>
+                       <span class="day">Saturday</span>
+                    </div>
+                    <div class="row calendar-days">
+                       <div class="day">
+                          <span class="day-number last-month-day">30</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number last-month-day">31</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">1</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">2</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">3</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">4</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">5</span>
+                       </div>
+                       <div class="clearfix"></div>
+                    </div>
+                    <div class="row calendar-days">
+                       <div class="day event-day">
+                          <span class="day-number current-month-day day-event">6</span>
+                          <span class="event-text">Mothers Day</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">7</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">8</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">9</span>
+                          <div class="day-info">
+                            <div class="relative">
+                               <span class="light-bulb bulb-green"></span><span class="day-text">Call with Sam</span>
+                            </div>
+                            <div>
+                               <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">3:15 pm</span>
+                            </div>
+                            <div>
+                               <img src="images/icons/comment.png" class="comment-icon" alt="comment"><img src="images/icons/attachment.png" class="attachment-icon" alt="attachment"><img src="images/icons/place.png" class="place-icon" alt="place">
+                            </div>
+                          </div>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">10</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day" data-event="1">11</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day" data-event="2">12</span>
+                       </div>
+                       <div class="events">
+                         <div class="event" style="right: 32px;width: 305px;">
+                           Secodment
+                         </div>
+                       </div>
+                       <div class="clearfix"></div>
+                    </div>
+                    <div class="row calendar-days">
+                       <div class="day">
+                          <span class="day-number current-month-day">13</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">14</span>
+                       </div>
+                       <div class="day">
+                            <span class="day-number current-month-day">15</span>
+                          <div class="day-info">
+                            <div class="relative">
+                               <span class="light-bulb bulb-green"></span><span class="day-text">Design review</span>
+                            </div>
+                            <div>
+                               <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">8:55 pm</span>
+                            </div>
+                            <div>
+                               <span class="light-bulb bulb-green"></span><span class="day-text">QA</span>
+                            </div>
+                            <div>
+                               <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">4:10 pm</span>
+                            </div>
+                          </div>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">16</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">17</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">18</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">19</span>
+                       </div>
+                       <div class="clearfix"></div>
+                    </div>
+                    <div class="row calendar-days">
+                       <div class="day">
+                          <span class="day-number current-month-day">20</span><!--the day 20 was skipped in the mockup--> 
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">21</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">22</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">23</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">24</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">25</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">26</span>
+                          <div class="day-info">
+                            <div class="relative">
+                               <span class="light-bulb bulb-green"></span><span class="day-text">Call with Dave</span>
+                            </div>
+                            <div>
+                               <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">1:30 pm</span>
+                            </div>
+                          </div>
+                       </div>
+                       <div class="events">
+                         <div class="event" style="right: 420px;width: 500px;">
+                           Vacation
+                         </div>
+                       </div>
+                       <div class="clearfix"></div>
+                    </div>
+                    <div class="row calendar-days">
+                       <div class="day">
+                          <span class="day-number current-month-day">27</span>
+                          <div class="day-info">
+                            <div class="relative">
+                               <span class="light-bulb bulb-green"></span><span class="day-text">Meet with Dave</span>
+                            </div>
+                            <div>
+                               <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">5:00 pm</span>
+                            </div>
+                          </div>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">28</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">29</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">30</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number current-month-day">31</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number next-month-day">1</span>
+                       </div>
+                       <div class="day">
+                          <span class="day-number next-month-day">2</span>
+                       </div>
+                       <div class="clearfix"></div>
+                    </div>
+                 </div>
+                 <!-- calendar days end -->
+              </div>
+           </div>
+           <div class="right column-activity pull-right scroll" >
+              <h3>Calendar activity</h3>
+              <input type="search" name="calendar-search" value="Search by person, date, action" class="activity-search">
+              <div class="activity-list">
+                 <div class="activity-unit">
+                    <div class="user-photo-and-activity">
+                       <img src="images/people/3.png" alt="$user-name">
+                       <span class="light-bulb bulb-green"></span>
+                    </div>
+                    <div class="user-unit-info">
+                       <h6 class="name">Eimantas Rudminas</h6>
+                       <h5 class="activity-info">Commented on “Call with Sam” meet</h5>
+                       <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">May 4, Friday</span>
+                    </div>
+                 </div>
+                 <div class="activity-unit">
+                    <div class="user-photo-and-activity">
+                       <img src="images/people/2.png" alt="$user-name">
+                       <span class="light-bulb bulb-green"></span>
+                    </div>
+                    <div class="user-unit-info">
+                       <h6 class="name">Simona Lubytė</h6>
+                       <h5 class="activity-info">Commented on “Call with Sam” meet</h5>
+                       <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">May 4, Friday</span>
+                    </div>
+                 </div>
+                 <h3 class="seperator-date">Monday 7, 2018</h3>
+                 <div class="activity-unit">
+                    <div class="user-photo-and-activity">
+                       <img src="images/people/3.png" alt="$user-name">
+                       <span class="light-bulb bulb-green"></span>
+                    </div>
+                    <div class="user-unit-info">
+                       <h6 class="name">Eimantas Rudminas</h6>
+                       <h5 class="activity-info">Commented on “Design review” meet</h5>
+                       <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">3:15 PM</span>
+                    </div>
+                 </div>
+                 <div class="activity-unit">
+                    <div class="user-photo-and-activity">
+                       <img src="images/people/4.png" alt="$user-name">
+                       <span class="light-bulb bulb-green"></span>
+                    </div>
+                    <div class="user-unit-info">
+                       <h6 class="name">Vytis Radvila</h6>
+                       <h5 class="activity-info">Accepted “QA” meeting invite</h5>
+                       <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">4:23 pm</span>
+                    </div>
+                 </div>
+                 <div class="activity-unit">
+                    <div class="user-photo-and-activity">
+                       <img src="images/people/4.png" alt="$user-name">
+                       <span class="light-bulb bulb-green"></span>
+                    </div>
+                    <div class="user-unit-info">
+                       <h6 class="name">Vytis Radvila</h6>
+                       <h5 class="activity-info">Commented on “QA” meet</h5>
+                       <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">4:28 pm</span>
+                    </div>
+                 </div>
+                 <div class="activity-unit">
+                    <div class="user-photo-and-activity">
+                       <img src="images/people/1.png" alt="$user-name">
+                       <span class="light-bulb bulb-red"></span>
+                    </div>
+                    <div class="user-unit-info">
+                       <h6 class="name">Darius Mikalauskas</h6>
+                       <h5 class="activity-info">Created a “Meet with Dave” meet</h5>
+                       <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">5:30 pm</span>
+                    </div>
+                 </div>
+                 <div class="activity-unit">
+                    <div class="user-photo-and-activity">
+                       <img src="images/people/3.png" alt="$user-name">
+                       <span class="light-bulb bulb-green"></span>
+                    </div>
+                    <div class="user-unit-info">
+                       <h6 class="name">Eimantas Rudminas</h6>
+                       <h5 class="activity-info">Accepted “Meet wit Dave” meeting invite</h5>
+                       <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">5:32 pm</span>
+                    </div>
+                 </div>
+                 <div class="activity-unit">
+                    <div class="user-photo-and-activity">
+                       <img src="images/people/2.png" alt="$user-name">
+                       <span class="light-bulb bulb-green"></span>
+                    </div>
+                    <div class="user-unit-info">
+                       <h6 class="name">Simona Lubytė</h6>
+                       <h5 class="activity-info">Accepted “Meet wit Dave” meeting invite</h5>
+                       <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">5:35 pm</span>
+                    </div>
+                 </div>
+                 <div class="activity-unit">
+                    <div class="user-photo-and-activity">
+                       <img src="images/people/1.png" alt="$user-name">
+                       <span class="light-bulb bulb-red"></span>
+                    </div>
+                    <div class="user-unit-info">
+                       <h6 class="name">Darius Mikalauskas</h6>
+                       <h5 class="activity-info">Added 12 photos in “Design review” meet</h5>
+                       <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">5:50 pm</span>
+                    </div>
+                 </div>
+                 <div class="activity-unit">
+                    <div class="user-photo-and-activity">
+                       <img src="images/people/2.png" alt="$user-name">
+                       <span class="light-bulb bulb-green"></span>
+                    </div>
+                    <div class="user-unit-info">
+                       <h6 class="name">Simona Lubytė</h6>
+                       <h5 class="activity-info">Commented on “Design review” meet</h5>
+                       <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">5:35 pm</span>
+                    </div>
+                 </div>
+                 <div class="activity-unit">
+                    <div class="user-photo-and-activity">
+                       <img src="images/people/1.png" alt="$user-name">
+                       <span class="light-bulb bulb-red"></span>
+                    </div>
+                    <div class="user-unit-info">
+                       <h6 class="name">Darius Mikalauskas</h6>
+                       <h5 class="activity-info">Added 12 photos in “Design review” meet</h5>
+                       <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">5:50 pm</span>
+                    </div>
+                 </div>
+                 <div class="activity-unit">
+                    <div class="user-photo-and-activity">
+                       <img src="images/people/4.png" alt="$user-name">
+                       <span class="light-bulb bulb-green"></span>
+                    </div>
+                    <div class="user-unit-info">
+                       <h6 class="name">Vytis Radvila</h6>
+                       <h5 class="activity-info">Accepted “QA” meeting invite</h5>
+                       <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">4:23 pm</span>
+                    </div>
+                 </div>
+                 <div class="activity-unit">
+                    <div class="user-photo-and-activity">
+                       <img src="images/people/4.png" alt="$user-name">
+                       <span class="light-bulb bulb-green"></span>
+                    </div>
+                    <div class="user-unit-info">
+                       <h6 class="name">Vytis Radvila</h6>
+                       <h5 class="activity-info">Commented on “QA” meet</h5>
+                       <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">4:28 pm</span>
+                    </div>
+                 </div>
+                 <div class="activity-unit">
+                    <div class="user-photo-and-activity">
+                       <img src="images/people/1.png" alt="$user-name">
+                       <span class="light-bulb bulb-red"></span>
+                    </div>
+                    <div class="user-unit-info">
+                       <h6 class="name">Darius Mikalauskas</h6>
+                       <h5 class="activity-info">Created a “Meet with Dave” meet</h5>
+                       <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">5:30 pm</span>
+                    </div>
+                 </div>
+                 <div class="activity-unit">
+                    <div class="user-photo-and-activity">
+                       <img src="images/people/2.png" alt="$user-name">
+                       <span class="light-bulb bulb-green"></span>
+                    </div>
+                    <div class="user-unit-info">
+                       <h6 class="name">Simona Lubytė</h6>
+                       <h5 class="activity-info">Commented on “Design review” meet</h5>
+                       <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">5:35 pm</span>
+                    </div>
+                 </div>
+                 <div class="activity-unit">
+                    <div class="user-photo-and-activity">
+                       <img src="images/people/1.png" alt="$user-name">
+                       <span class="light-bulb bulb-red"></span>
+                    </div>
+                    <div class="user-unit-info">
+                       <h6 class="name">Darius Mikalauskas</h6>
+                       <h5 class="activity-info">Added 12 photos in “Design review” meet</h5>
+                       <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">5:50 pm</span>
+                    </div>
+                 </div>
+                 <div class="activity-unit">
+                    <div class="user-photo-and-activity">
+                       <img src="images/people/2.png" alt="$user-name">
+                       <span class="light-bulb bulb-green"></span>
+                    </div>
+                    <div class="user-unit-info">
+                       <h6 class="name">Simona Lubytė</h6>
+                       <h5 class="activity-info">Commented on “Design review” meet</h5>
+                       <img src="images/icons/clock.png" class="time-icon" alt="time"><span class="day-text grey-text">5:35 pm</span>
+                    </div>
+                 </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+         </div>
+      </div>
+   </body>
+</html>

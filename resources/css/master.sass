@@ -1,0 +1,318 @@
+/* first line comment, because I'm using atom scss compilator, it needs a first line comment to know which file to compile*/
+$body-background: #EEEEF7
+$black: #000
+$second-black: #506584 
+//week days, valender select slider, nav menu ^^
+$grey: #AFBDD2
+$status-green: #7CD500
+$status-red: #F3343E
+$event-gradient: linear-gradient(90deg, #FFE53B -7.95%, #FC2A2F 96.63%)
+$slider-gradient: linear-gradient(105.04deg, #FFE53B -42.74%, #F3333E 42.22%)
+$event-day-border: #FF8484
+$event-day-text: #F3333E
+$white: #fff
+$border-grey: #EAEBF0
+$bottom-background: #f8f9fb
+
+@import fonts
+
+body 
+  padding: 0
+  margin: 0
+  background-color: $body-background
+  font-family: "DIN"
+  font-weight: 600
+.pull-left
+  float: left
+.pull-right
+  float: right
+.relative
+  position: relative
+.clearfix
+  &::after 
+    display: block
+    content: ""
+    clear: both
+.content-container
+  background: $white
+  margin: auto
+  width: 1730px
+  margin-top: 55px
+  margin-bottom: 55px
+  border-top-left-radius: 15px
+  border-top-right-radius: 15px
+.grey-text
+  color: $grey
+nav
+  height: 93px
+  border-bottom: 1px solid $border-grey
+.logo
+  display: inline-block
+  width: 112px
+  height: 100%
+  text-align: center
+  border-right: 1px solid $border-grey
+.logo img
+  position: absolute
+  max-width: 100%
+  max-height: 100%
+  // if the logo would change ^^
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+div.search 
+  height: 100%
+  min-width: 300px
+  img
+    margin-left: 40px
+  input, img
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+  input
+    margin-left: 92px
+    border: 1px solid transparent
+    font-size: 16px
+    color: $grey
+    font-weight: bold
+.user-info 
+  box-sizing: border-box
+  float: right
+  width: 346px
+  height: 100%
+  border-left: 1px solid #ebebf1
+  padding: 25px 40px
+  position: relative
+  .user-name
+    vertical-align: top
+  .user-photo
+    display: inline-block
+    position: absolute
+    right: 85px
+    top: 20px
+    
+ul.style-none
+  list-style-type: none
+  margin: 0
+  padding: 0
+.navigation 
+  min-width: 415px
+  display: inline-block
+  font-size: 16px
+  font-weight: bold
+  height: 100%
+  margin-left: 165px
+  ul.main-menu
+    height: 100%
+    display: flex
+    justify-content: space-around
+    li 
+      padding-top: 35px
+    .active-menu
+      border-bottom: 3px solid #F3333E
+  li 
+    float: left
+  a 
+    text-decoration: none
+    text-transform: capitalize
+    font-weight: bold
+    color: $second-black
+.navigation-messages
+  display: inline-block
+  vertical-align: middle
+  margin-left: 160px
+  .notification-icon
+    margin: 20px
+    position: relative
+    &:hover
+      cursor: pointer
+    .notification-count
+      position: absolute
+      top: -20px
+      right: -11px
+      background: red
+      padding: 3px 3px
+      border-radius: 50%
+      font-size: 12px
+      color: #fff
+      border: 3px solid #fff
+.dropdown
+  .dropdown-content
+    display: none
+.calendar-menu
+  h1,.select-calendar.switch.switch-three.candy
+    display: inline-block
+  .select-calendar.switch.switch-three.candy
+    margin: 0px 250px
+@import switch
+
+button 
+    border: none
+    background: #ebebf5
+    padding: 10px 30px
+    border-radius: 30px
+    font-family: DIN
+    font-size: 16px
+    box-shadow: 0px 32px 264px rgba(194, 194, 223, 0.471666)
+    &:hover
+      cursor: pointer
+      background: #dcdce1
+.bottom-background
+  background: $bottom-background
+#calendar-wrapper 
+    width: 1345px
+    margin: 19.5px
+.first-calender-row
+    margin-top: 28px
+    border-top: 1px solid $border-grey
+    border-left: 1px solid  $border-grey
+    border-right: 1px solid  $border-grey
+    h3.month-active
+      margin: 12px  
+      display: inline-block
+    .percent-91
+      width: 91%
+      display: inline-block
+      text-align: center
+    span.calendar-grid-filters img
+      margin: 0px 0px 0px 15px
+    img.chevron-flipped 
+        transform: scaleX(-1)
+.calendar-grid
+  .row 
+    width: 100%
+    clear: both
+    position: relative
+  .row.calendar-days
+    &:nth-of-type(6)
+      border-bottom: 1px solid $border-grey
+  .day 
+      box-sizing: border-box
+      width: 14.28%
+      float: left
+      min-height: 135px
+      height: 100%
+      padding: 19px
+      border-top: 1px solid $border-grey
+      border-left: 1px solid $border-grey
+      &:hover
+        background: #fff
+        box-shadow: 0px 2px 73px #CCCCDC
+      &:nth-of-type(7)
+        border-right: 1px solid $border-grey
+      .day-number
+        font-size: 23px
+        font-weight: bold
+        vertical-align: top
+      .event-text
+        font-size: 17px 
+        font-weight: bold
+      .day-info
+        display: inline-block
+        padding: 12px 0 0 3px
+      .day-text 
+        font-size: 14px
+  .event-day
+    border: 1px solid $event-day-border
+    .day-number,.event-text
+      color: $event-day-text
+  .event
+    background: linear-gradient(90deg, #FFE53B -7.95%, #FC2A2F 96.63%)
+    border-radius: 15px
+    position: absolute
+    top: 61%
+    padding: 6px
+    color: #fff
+    padding-left: 15px
+    &:hover
+      cursor: pointer
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  .week-days .day
+    height: 36px
+    min-height: 36px
+    padding: 10px 30px
+    border-top: 1px solid $border-grey
+    border-left: 1px solid $border-grey
+    &:nth-of-type(7)
+      border-right: 1px solid $border-grey
+.column-activity
+  box-sizing: border-box
+  width: 345px
+  padding: 9px
+  max-height: 890px
+  overflow-y: scroll
+  background-image: linear-gradient(180deg, #EDEDF6 0%, #F8F9FB 100%)
+  h3
+    margin: 6px
+    font-size: 16px
+  h3.seperator-date
+    margin: 35px 6px
+  .user-photo-and-activity
+    position: relative
+    display: inline-block
+    vertical-align: top
+    width: 32px
+    img
+      width: 100%
+      border-radius: 50%
+    margin-right: 12px
+  .user-unit-info
+    display: inline-block
+    h5,h6
+      margin: 0
+    h6.name 
+      font-size: 14px
+      font-weight: bold
+    h5.activity-info
+      font-size: 14px
+      font-weight: normal
+  .activity-unit 
+    margin-bottom: 17px
+  span.light-bulb 
+    position: absolute
+    bottom: 0px
+    right: 2px
+    margin: 0
+span.light-bulb
+  margin-right: 8px
+  width: 10px
+  display: inline-block
+  height: 10px
+  border-radius: 50%
+.bulb-green
+  background: $status-green
+.bulb-red
+  background: $status-red
+.time-icon
+  margin-right: 5px
+  vertical-align: bottom
+.comment-icon,.attachment-icon,.place-icon
+  margin-right: 10px
+  margin-top: 14px
+.activity-search
+  border: none
+  padding: 8px
+  width: 305px
+  text-indent: 29px
+  color: #aebdda
+  font-family: DIN
+  margin: 4px 0px 27px 4px
+  font-size: 14px
+  background-image: url('../../images/icons/search.png')
+  background-repeat: no-repeat
+  background-position: 12px
+  background-size: 14px
+    
+.scroll::-webkit-scrollbar-track
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+	border-radius: 10px
+	background-color: #F5F5F5
+
+.scroll::-webkit-scrollbar
+	width: 6px
+	background-color: #F5F5F5
+
+.scroll::-webkit-scrollbar-thumb
+	border-radius: 5px
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3)
+	background-color: #afbdd3

@@ -1,0 +1,49 @@
+.switch 
+  position: relative
+  width: 525px
+  padding: 0 1rem
+  z-index: 99
+  &:before 
+    content: '  '
+    position: absolute
+    left: 0
+    z-index: -1
+    width: 100%
+    height: 3rem
+    background: #fff
+    border-radius: 30px
+  &__label 
+    z-index: 10
+    color: #000
+    display: inline-block
+    width: 95px
+    padding: 1rem
+    text-align: center
+    cursor: pointer
+    transition: color 200ms ease-out
+  &__indicator 
+    z-index: -1
+    width: 140px
+    height: 3rem
+    position: absolute
+    top: 0rem
+    left: 0
+    border-radius: 30px
+    transition: transform 600ms cubic-bezier(.02,.94,.09,.97)
+    transform: translate3d(1rem,0,0)
+  input#one:checked ~ .switch__indicator 
+    transform: translate3d(10px,0,0)
+  input#two:checked ~ .switch__indicator
+    transform: translate3d(140px,0,0)  
+  input#three:checked ~ .switch__indicator 
+    transform: translate3d(275px,0,0)
+  input#four:checked ~ .switch__indicator 
+    transform: translate3d(410px,0,0) 
+  .switch__indicator
+    background: linear-gradient(161.04deg, #FFE53B 4.26%, #F3333E 42.22%) 
+  input[type="radio"] 
+    &:not(:checked),
+    &:checked 
+      display: none
+  .switch input[type="radio"]:checked ~ label
+    color: #000
